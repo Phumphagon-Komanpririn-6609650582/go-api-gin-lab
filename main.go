@@ -21,6 +21,7 @@ func main() {
 	r.GET("/students", handler.GetStudents)
 	r.GET("/students/:id", handler.GetStudentByID)
 	r.POST("/students", handler.CreateStudent)
-
+	r.PUT("/students/:id", handler.UpdateStudentHandler)
+	r.DELETE("/students/:id", handler.DeleteStudentHandler)
 	r.Run(":8080")
 }
